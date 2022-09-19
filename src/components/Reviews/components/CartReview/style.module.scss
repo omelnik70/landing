@@ -1,0 +1,59 @@
+@import '../../../../global.scss';
+
+.containerBox {
+    background: #fff;
+    padding-top: 43px;
+    padding-bottom: 58px;
+    padding-left: 45px;
+    padding-right: 45px;
+    text-align: center;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & i:not(:last-of-type) {
+        margin-right: 6px;
+    }
+    & i::before {
+        font-family: 'FontAwesome';
+        content: "\2605";
+        font-style: normal;
+        font-size: 26px;
+        color: #ffb400;
+    }
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #393939;
+    line-height: 1.2;
+    margin-top: 21px;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #393939;
+    line-height: 1.2;
+    margin-top: 24px;
+    & p:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.image {
+    width: 106px;
+    height: 106px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    & img {
+        display: block;
+        width: 100%;
+    }
+}

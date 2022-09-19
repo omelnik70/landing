@@ -1,0 +1,16 @@
+@import '../../global.scss';
+
+.iconBox {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0;
+    & img {
+        width: 25%;
+    }
+    & img:first-child {
+      border-radius: 50%;
+  }
+}

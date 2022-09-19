@@ -1,0 +1,58 @@
+@import '../../global.scss';
+
+.containerBox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+}
+
+.text {
+    margin-top: 28;
+    text-align: center;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+}
+
+.number {
+    flex: 1 1 50%;
+    margin-top: 63px;
+    &:first-child {
+        margin-right: 30px;
+    }
+}
+
+// @media (min-width: 576px) {
+//     .containerBox {
+//         max-width: 540px;
+//     }
+// }
+
+// @media (min-width: 768px) {
+//     .containerBox {
+//         max-width: 720px;
+//     }
+// }
+
+// @media (min-width: 992px) {
+//     .containerBox {
+//         max-width: 960px;
+//     }
+// }
+
+@media (min-width: 1200px) {
+    .containerBox {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+}

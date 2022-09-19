@@ -1,0 +1,53 @@
+@import '../../../../global.scss';
+
+.cartServiceBox {
+  padding: 0 5px;
+  margin-bottom: 80px;
+}
+
+.flexBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iconBox {
+  width: 82px;
+  height: 82px;
+  & img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.titleBox {
+ margin-top: 16px;
+ & h2 {
+  font-family: 'Raleway',sans-serif;
+  font-size: 30px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgb(0 0 0 / 1%) 0 0 1px;
+  line-height: 1.2;
+  color: #393939;
+  font-weight: 600;
+ }
+}
+
+.textBox {
+  margin-top: 21px;
+  & P {
+    text-align: center;
+  }
+  & p:last-of-type {
+      margin-bottom: 0;
+  }
+}
+  
+@media (min-width: 992px) {
+    .cartServiceBox {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+  }
+}

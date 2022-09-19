@@ -1,0 +1,38 @@
+@import '../../global.scss';
+
+.containerBox {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.rowBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 576px) {
+    .containerBox {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .containerBox {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .containerBox {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .containerBox {
+        max-width: 1140px;
+    }
+}

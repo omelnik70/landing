@@ -1,0 +1,70 @@
+@import '../../global.scss';
+
+.containerBox {
+    flex: 0 0 30%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.rowBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.infoBox {
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 74px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    & p {
+        margin-bottom: 0;
+    }
+}
+
+.copyrightBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 74px;
+    & p {
+        margin: 0 2px;
+    }
+    & a {
+        margin: 0 2px;
+    }
+}
+
+@media (min-width: 576px) {
+    .containerBox {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .containerBox {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .containerBox {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .containerBox {
+        max-width: 1140px;
+    }
+}

@@ -1,0 +1,16 @@
+@import '../../global.scss';
+
+.logo {
+  width: auto;
+  padding: 0 5px;
+  border: solid 2px #fff;
+  text-align: center;
+}
+
+.logo a {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 37px;
+}

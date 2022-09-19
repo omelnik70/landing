@@ -1,0 +1,30 @@
+@import '../../../../global.scss';
+
+.containerBox {
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: auto;
+    & h2 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(110, 108, 108, 0.5);
+    }
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.cartBlogBox {
+    width: 200px;
+    height: 200px;
+}
