@@ -12,7 +12,7 @@ const Logo = ({ style }) => {
   
   return (
     <div class={styles.logo}>
-      <a style={style} href="/">{logo}</a>
+      <a style={style} href="/#top">{logo}</a>
     </div>
   );
 }

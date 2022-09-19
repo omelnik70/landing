@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 
 import Gallery from '../Gallery';
 import Store from '../../store/store';
@@ -17,6 +17,24 @@ import styles from './style.module.scss';
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, Store);
+  const { lang, ru, ua, arrow, arrow_top, currentScroll } = state;
+
+  const mainTitle = lang ? ru.logoSite : ua.logoSite;
+  const subTitle = lang ? ru.subTitle : ua.subTitle;
+  const description = lang ? ru.description : ua.description;
+  const metaDescription = lang ? ru.metaDescription : ua.metaDescription;
+  const metaKeywords = lang ? ru.metaKeywords : ua.metaKeywords;
+
+  useEffect(() => {
+    const title = document.querySelector('title');
+    const metaDesc = document.querySelectorAll('meta')[1];
+    const metaKeyw = document.querySelectorAll('meta')[2];
+    //console.log(document.querySelectorAll('meta'));
+    title.textContent = `${mainTitle} | ${description}`;
+    metaDesc.content = metaDescription;
+    metaKeyw.content = metaKeywords;
+  })
+
   document.addEventListener("DOMContentLoaded", () => {
     alert("DOM готов!");
   });
@@ -25,9 +43,20 @@ const App = () => {
 
   return (
     <Context.Provider value={value}>
-      <div className={styles.containerBox}>
+      <div id="top" className={styles.containerBox}>
+      {currentScroll >= 1800 && (<div className={styles.arrowTop}>
+        <a href="/#top"><img src={arrow_top} alt="" /></a>
+      </div>)}
         <Header />
-        <div className='carouselBox'>
+        <div className={styles.carouselBox}>
+          <div className={styles.mainText}>
+            <h1>{mainTitle}</h1>
+            <h2>{subTitle}</h2>
+            <p>{description}</p>
+          </div>
+          {!currentScroll && (<div className={styles.arrow}>
+            <img src={arrow} alt="" />
+          </div>)}
           <CarouselBox />
         </div>
         <div className={styles.serviceBox}>

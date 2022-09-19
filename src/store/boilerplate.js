@@ -1,5 +1,6 @@
 //устанавливаем константы для типов dispatch
 const CURRENTLANG = "currentLang";
+const CURRENTSCROLL = "currentActionScroll";
 const MODALACTIVEGALLERY = "modalActivGallery";
 const MODALACTIVEBLOG = "modalActivBlog";
 const CONTENTCURRENTEBLOG = "contentCurrentBlog";
@@ -10,5 +11,6 @@ export {
     MODALACTIVEGALLERY,
     MODALACTIVEBLOG,
     CONTENTCURRENTEBLOG,
-    MODALACTIVEFORM
+    MODALACTIVEFORM,
+    CURRENTSCROLL
 };

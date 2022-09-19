@@ -3,7 +3,8 @@ import {
     MODALACTIVEGALLERY, 
     MODALACTIVEBLOG,
     CONTENTCURRENTEBLOG,
-    MODALACTIVEFORM
+    MODALACTIVEFORM,
+    CURRENTSCROLL
 } from "./boilerplate";
 
 //создаем кейсы по изменению состояния
@@ -15,6 +16,12 @@ const reducer = (state, action) => {
             //производим действие по изменению старого состояния
             ...state,
             lang: action.payload,
+        };
+
+        case CURRENTSCROLL: 
+        return {
+            ...state,
+            currentScroll: action.payload,
         };
 
         case MODALACTIVEGALLERY: 

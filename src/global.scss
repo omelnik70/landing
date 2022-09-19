@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 //reset styles
 *{
 	padding: 0;
@@ -38,13 +39,21 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 
-h1, h4, h5, h6{font-size: inherit;font-weight: 400;}
+h4, h5, h6{font-size: inherit;font-weight: 400;}
 
 p {
     font-size: 15px;
     line-height: 2;
     font-weight: 500;
     color: #6d6d6d;
+}
+
+h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+    line-height: 1.2;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 h2 {

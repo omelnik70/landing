@@ -10,6 +10,8 @@ import SHOWER from "./icons/shower.png";
 import WI_FI from "./icons/wi-fi.png";
 import PARKING from "./icons/parking.png";
 import APARTMENTS from "./icons/apartments.png";
+import ARROW from "./icons/arrow.png";
+import ARROW_TOP from "./icons/up.png";
 //image/about
 import MYKULYCHYN_GERB from "./image/about/mykulychyn_gerb.png";
 import MYKULYCHYN_PRAPOR from "./image/about/mykulychyn_prapor.png";
@@ -60,6 +62,8 @@ const ICONS = {
     WI_FI,
     PARKING,
     APARTMENTS,
+    ARROW,
+    ARROW_TOP
 };
 
 const IMAGES = {

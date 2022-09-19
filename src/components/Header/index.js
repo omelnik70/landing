@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import { currentLang } from '../../store/actions';
+import { currentLang, currentActionScroll } from '../../store/actions';
 import uaFlag from "../../assets/icons/ua.png";
 import ruFlag from "../../assets/icons/ru.png";
 import Context from "../../Context";
@@ -11,27 +11,26 @@ import Button from '../Button';
 import styles from './style.module.scss';
 
 const Header = () => {
-  const [scroll, setScroll] = useState(0);
   const [focus, setFocus] = useState(false);
   const { state, dispatch } = useContext(Context);
-  const { lang, ru, ua } = state;
+  const { lang, ru, ua, mail, currentScroll } = state;
 
   const message = lang ? ru.message : ua.message;
   const phone = lang ? ru.phone : ua.phone;
   const nav = lang ? ru.nav : ua.nav;
   
   const handleScroll = () => {
-    setScroll(window.scrollY);
+    dispatch(currentActionScroll(window.scrollY));
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  });
   
   return (
     <div className={
-      `${styles.containerBox} ${scroll ?  styles.containerBoxScroll : ""}`}
+      `${styles.containerBox} ${currentScroll ?  styles.containerBoxScroll : ""}`}
       >
       <div className={styles.content}>
         <Logo />
@@ -41,7 +40,7 @@ const Header = () => {
               {nav.map((item, index) => (<li key={index}><a href={item.link}>{item.text}</a></li>))}
             </ul>
           </nav>
-          <Button message={message} />
+          <Button message={message} mail={mail} />
           <div className={styles.phone}>
             <img src={phoneImg} alt="phone" />
             <span><a className={styles.phoneLink} href={`tel:${phone}`}>{phone}</a></span>

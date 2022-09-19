@@ -11,13 +11,21 @@ const Store = {
     //модальное окно открыто/закрыто
     modalGallery: false,
     modalBlog: false,
-    contentCurrentBlog: [],
     modalForm: false,
+    contentCurrentBlog: [],
+    mail: "mailto:omelnik70@gmail.com",
+    arrow: ICONS.ARROW,
+    arrow_top: ICONS.ARROW_TOP,
+    currentScroll: 0,
 
     ua: {
         //heder
         logoSite: `Садиба "У Якова"`,
-        message: "Надіслати повідомлення",
+        subTitle: "Ласкаво просимо до Микуличина!",
+        description: "Чисте повітря, прекрасні гори, свіжозварене пиво чекають саме на Вас!",
+        metaDescription: "Чисте повітря, чудові гори, свіжозварене пиво, піший туризм, походи по горах, лижний курорт, зимові розваги",
+        metaKeywords: "Микуличин, відпочинок у горах, походи в гори, зимовий відпочинок, лижний курорт, карпатські чани",
+        message: "Написати нам",
         phone: "+3807610748",
         nav: [
             {text: "Про нас", link: "/#about"},
@@ -198,7 +206,7 @@ const Store = {
         blog: [
             {
                 title: "Природна краса Микуличина",
-                img: IMAGES.CAROUSEL.CAROUSEL_2,
+                img: IMAGES.BLOG.WATERFALL,
                 content: [
                     {
                         h2: "Водоспад Женецький Гук",
@@ -364,7 +372,11 @@ const Store = {
     ru: {
         //heder
         logoSite: `Усадьба  "У Якова"`,
-        message: "Отправить сообщение",
+        subTitle: "Добро пожаловать в Микуличин!",
+        description: "Чистый воздух, прекрасные горы, свежесваренное пиво ждут именно Вас!",
+        metaDescription: "Чистый воздух, прекрасные горы, свежесваренное пиво, пеший туризм, походы по горам, лыжный курорт, зимние развлечения",
+        metaKeywords: "Микуличин, отдых в горах, походы в горы, зимний отдых, лыжный курорт, карпатские чаны",
+        message: "Написать нам",
         phone: "+3807610748",
         nav: [
             {text: "О нас", link: "/#about"},
@@ -545,7 +557,7 @@ const Store = {
         blog: [
             {
                 title: "Природная красота Микуличина",
-                img: IMAGES.CAROUSEL.CAROUSEL_2,
+                img: IMAGES.BLOG.WATERFALL,
                 content: [
                     {
                         h2: "Водопад Женецкий Гук",

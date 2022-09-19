@@ -3,12 +3,18 @@ import {
     MODALACTIVEGALLERY, 
     MODALACTIVEBLOG, 
     CONTENTCURRENTEBLOG,
-    MODALACTIVEFORM
+    MODALACTIVEFORM,
+    CURRENTSCROLL
 } from "./boilerplate";
 
 //создаем action генераторы
 const currentLang = (payload) => ({
     type: CURRENTLANG,
+    payload,
+});
+
+const currentActionScroll = (payload) => ({
+    type: CURRENTSCROLL,
     payload,
 });
 
@@ -37,5 +43,6 @@ export {
     modalActivGallery,
     modalActivBlog,
     contentCurrentBlog,
-    modalActivForm
+    modalActivForm,
+    currentActionScroll
 };

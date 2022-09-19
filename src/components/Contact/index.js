@@ -9,7 +9,7 @@ import styles from './style.module.scss';
 
 function Contact() {
   const { state } = useContext(Context);
-  const { lang, ua, ru } = state;
+  const { lang, ua, ru, mail } = state;
   const info = lang ? ru.footer : ua.footer;
   const message = lang ? ru.message : ua.message;
 
@@ -21,6 +21,7 @@ function Contact() {
       <div className={styles.rowBox}>
         <Logo 
           style={{
+          fontFamily: "'Lobster', cursive",
           fontSize: "35px",
           color: "black", 
           border: "solid 2px black", 
@@ -45,6 +46,7 @@ function Contact() {
                 marginLeft: "0"
               }} 
               message={message}
+              mail={mail}
             />
           </div>
           <Icons 
