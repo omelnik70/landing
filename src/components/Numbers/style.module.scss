@@ -3,7 +3,6 @@
 .containerBox {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
     justify-content: center;
     margin-right: -15px;
     margin-left: -15px;
@@ -15,11 +14,13 @@
 }
 
 .text {
-    margin-top: 28;
+    margin-top: 28px;
     text-align: center;
+    padding: 0 5%;
 }
 
 .numbers {
+    width: 90%;
     display: flex;
     justify-content: center;
 }
@@ -27,9 +28,6 @@
 .number {
     flex: 1 1 50%;
     margin-top: 63px;
-    &:first-child {
-        margin-right: 30px;
-    }
 }
 
 // @media (min-width: 576px) {
@@ -44,15 +42,23 @@
 //     }
 // }
 
-// @media (min-width: 992px) {
-//     .containerBox {
-//         max-width: 960px;
-//     }
-// }
+@media (min-width: 992px) {
+    .text {
+        padding: 0 5%;
+    }
+
+    .numbers {
+        width: 90%;
+    }
+}
 
 @media (min-width: 1200px) {
     .containerBox {
         max-width: 1140px;
         margin: 0 auto;
+    }
+
+    .numbers {
+        width: 100%;
     }
 }

@@ -3,7 +3,9 @@ import React, { useState, useEffect, Children, cloneElement } from 'react';
 import { 
     handleClickOffsetLeft, 
     handleClickOffsetRight, 
-    numberSlides } from '../Carousel/actions';
+    numberSlides 
+} from '../Carousel/actions';
+
 import styles from './style.module.scss';
 
 function Carousel({ children, value }) {
@@ -61,7 +63,7 @@ function Carousel({ children, value }) {
             onMouseLeave={() => setHover(false)}
             className={styles.windowBox}
         >
-            {manual && (<div 
+            {(manual || hover) && (<div 
                 onClick={() => handleClickOffsetLeft(setOffset, setComparison, sumSlides , slidesInBlock)}
                 className={`${styles.arrow} ${styles.left}`}>{"<"}
             </div>)}
@@ -74,7 +76,7 @@ function Carousel({ children, value }) {
             >
                 {slides}
             </div>
-            {manual && (<div 
+            {(manual || hover) && (<div 
                 onClick={() => handleClickOffsetRight(setOffset, slidesInBlock)}
                 className={`${styles.arrow} ${styles.right}`}>{">"}
             </div>)}

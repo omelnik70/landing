@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 
 import Context from "../../Context";
+import { handleShow } from '../../store/helper';
 
 import styles from './style.module.scss';
 
-const Logo = ({ style }) => {
+const Logo = ({ style, top }) => {
   const { state } = useContext(Context);
   const { lang, ru, ua } = state;
 
@@ -12,7 +13,7 @@ const Logo = ({ style }) => {
   
   return (
     <div class={styles.logo}>
-      <a style={style} href="/#top">{logo}</a>
+      <p style={style} onClick={() => handleShow(top)}>{logo}</p>
     </div>
   );
 }

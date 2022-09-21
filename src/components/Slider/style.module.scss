@@ -1,1 +1,16 @@
 @import '../../global.scss';
+
+.containerBox {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.slide {
+    width: 100vh;
+    background-size: 100%;
+    & img {
+        width: 100%;
+    }
+    //height: inherit;
+}

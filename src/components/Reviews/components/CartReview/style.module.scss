@@ -1,6 +1,10 @@
 @import '../../../../global.scss';
 
 .containerBox {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: #fff;
     padding-top: 43px;
     padding-bottom: 58px;

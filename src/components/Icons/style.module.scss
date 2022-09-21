@@ -1,14 +1,13 @@
 @import '../../global.scss';
 
 .iconBox {
-    width: 50%;
-    height: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10px 0;
     & img {
         width: 25%;
+        height: 100%;
     }
     & img:first-child {
       border-radius: 50%;

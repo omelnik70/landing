@@ -10,7 +10,6 @@
 
 .rowBox {
     display: flex;
-    flex-wrap: wrap;
 }
 
 @media (min-width: 576px) {
@@ -26,9 +25,6 @@
 }
 
 @media (min-width: 992px) {
-    .containerBox {
-        max-width: 960px;
-    }
 }
 
 @media (min-width: 1200px) {

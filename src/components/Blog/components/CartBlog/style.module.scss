@@ -1,7 +1,7 @@
 @import '../../../../global.scss';
 
 .containerBox {
-    margin-right: 2px;
+    margin: 0 2px;
     cursor: pointer;
 }
 
@@ -10,6 +10,7 @@
     width: 100%;
     height: auto;
     & h2 {
+        font-size: 16px;
         position: absolute;
         top: 50px;
         left: 50px;
@@ -27,4 +28,16 @@
 .cartBlogBox {
     width: 200px;
     height: 200px;
+}
+
+@media (min-width: 992px) {
+    .slide h2 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slide h2 {
+        font-size: 24px;
+    }
 }

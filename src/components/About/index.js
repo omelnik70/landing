@@ -18,7 +18,9 @@ const aboutTitle = lang ? ru.aboutTitle : ua.aboutTitle;
             <h2>{aboutTitle}</h2>
             <p>{aboutText}</p>
           </div>
+          <div className={styles.iconsBox}>
             <Icons />
+          </div>
         </div>
       </div>
   );

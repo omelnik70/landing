@@ -1,4 +1,3 @@
-@import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 //reset styles
 *{
@@ -17,8 +16,6 @@ a:focus, a:activ{outline: none;}
 nav, footer, header, aside{display: block;}
 
 html, body{
-	height: 100%;
-	width: 100%;
 	font-size: 100%;
 	line-height: 1;
 	font-size: 14px;

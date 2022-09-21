@@ -1,8 +1,8 @@
 @import '../../../../global.scss';
 
 .containerBox {
-    width: 80px;
-    height: 70px;
+    width: 70px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -18,5 +18,12 @@
         align-self: center;
         font-size: 10px;
         text-align: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .containerBox {
+        width: 80px;
+        height: 75px;
     }
 }

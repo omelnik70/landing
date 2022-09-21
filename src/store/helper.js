@@ -12,3 +12,7 @@ export function browserLocale (lang) {
   
     return lang
   };
+
+  export function handleShow (ref) {
+    ref.scrollIntoView({block: 'start', behavior: 'smooth'});
+  };

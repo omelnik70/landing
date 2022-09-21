@@ -1,10 +1,15 @@
 import { 
+    ISTOP,
+    ISCONTACT,
+    ISABOUT,
+    ISNUMBERS,
+    ISGALLERY,
     CURRENTLANG, 
     MODALACTIVEGALLERY, 
     MODALACTIVEBLOG, 
     CONTENTCURRENTEBLOG,
     MODALACTIVEFORM,
-    CURRENTSCROLL
+    CURRENTSCROLL,
 } from "./boilerplate";
 
 //создаем action генераторы
@@ -38,7 +43,37 @@ const modalActivForm = (payload) => ({
     payload,
 });
 
+const isTop = (payload) => ({
+    type: ISTOP,
+    payload,
+});
+
+const isContact = (payload) => ({
+    type: ISCONTACT,
+    payload,
+});
+
+const isAbout = (payload) => ({
+    type: ISABOUT,
+    payload,
+});
+
+const isNumbers = (payload) => ({
+    type: ISNUMBERS,
+    payload,
+});
+
+const isGallery = (payload) => ({
+    type: ISGALLERY,
+    payload,
+});
+
 export {
+    isTop,
+    isContact,
+    isAbout,
+    isNumbers,
+    isGallery,
     currentLang,
     modalActivGallery,
     modalActivBlog,

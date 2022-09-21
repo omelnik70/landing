@@ -4,7 +4,12 @@ import {
     MODALACTIVEBLOG,
     CONTENTCURRENTEBLOG,
     MODALACTIVEFORM,
-    CURRENTSCROLL
+    CURRENTSCROLL,
+    ISTOP,
+    ISCONTACT,
+    ISABOUT,
+    ISNUMBERS,
+    ISGALLERY,
 } from "./boilerplate";
 
 //создаем кейсы по изменению состояния
@@ -46,6 +51,36 @@ const reducer = (state, action) => {
         return {
             ...state,
             modalForm: action.payload,
+        };
+
+        case ISTOP: 
+        return {
+            ...state,
+            top: action.payload,
+        };
+
+        case ISCONTACT: 
+        return {
+            ...state,
+            contact: action.payload,
+        };
+
+        case ISABOUT: 
+        return {
+            ...state,
+            about: action.payload,
+        };
+
+        case ISNUMBERS: 
+        return {
+            ...state,
+            numbers: action.payload,
+        };
+
+        case ISGALLERY: 
+        return {
+            ...state,
+            gallery: action.payload,
         };
 
         //по умолчанию 

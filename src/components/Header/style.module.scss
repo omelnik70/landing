@@ -15,18 +15,19 @@
 }
 
 .content {
-  width: 100%;
   height: 90px;
-  padding-left: 5%;
   padding-right: 5%;
+  padding-left: 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .rightBlock {
+  width: inherit;
   margin-left: auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -36,6 +37,9 @@
 
 .menu {
   display: flex;
+  margin-left: 14px;
+  margin-bottom: 0;
+  padding-left: 0;
   & li {
     margin-right: 49px;
     &:last-child {
@@ -59,7 +63,7 @@
   width: 190px;
   height: 54px;
   background: #ffa37b;
-  margin-left: 14px;
+  margin: 0 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,18 +88,36 @@
   & img {
     width: 25px;
   }
-  width: 55px;
+  height: 54px;
   position: relative;
-  margin: 0 5px;
   cursor: pointer;
 }
 
 .langList {
   & img {
     position: absolute;
-    top: 0;
-    left: 30px;
+    top: 30px;
+    left: 0;
     width: 25px;
   }
   cursor: pointer;
 }
+
+
+
+@media (max-width: 992px) {
+  .content {
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+}
+
+
+
+// @media (min-width: 1200px) {
+//   .containerBox {
+//     max-width: 1140px;
+      
+//     //margin: 0 5%;
+//   }
+// }

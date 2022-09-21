@@ -21,20 +21,17 @@
     position: absolute;
     top: 45%;
     font-size: 40px;
-    font-weight: 700;
-    border: 2px solid white;
-    border-radius: 50%;
-    color: white;
-    padding: 0 9px 7px 9px;
+    color: rgba(110, 110, 110, 0.2);
     cursor: pointer;
 }
 
 .right {
-    right: -40px;
+    right: 40px;
 }
 
 .left {
-    left: -40px;
+    left: 40px;
+    z-index: 2;
 }
 
 // @media (min-width: 576px) {

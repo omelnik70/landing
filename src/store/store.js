@@ -17,6 +17,22 @@ const Store = {
     arrow: ICONS.ARROW,
     arrow_top: ICONS.ARROW_TOP,
     currentScroll: 0,
+    top: null,
+    about: null,
+    gallery:  null,
+    numbers:  null,
+    contact: null,
+    slider: [
+        {
+            img: IMAGES.CAROUSEL.CAROUSEL_1,
+        },
+        {
+            img: IMAGES.CAROUSEL.CAROUSEL_2,
+        },
+        {
+            img: IMAGES.CAROUSEL.CAROUSEL_3,
+        },
+    ],
 
     ua: {
         //heder
