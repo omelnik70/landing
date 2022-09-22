@@ -8,15 +8,20 @@ import styles from './style.module.scss';
 
 function Reviews() {
   const { state } = useContext(Context);
-  const { lang, ua, ru } = state;
+  const { lang, ua, ru, screenwidth } = state;
   const review = lang ? ru.review : ua.review;
   
   const sliderProps = {
     delayOffset: 3000, //скорость скольжения в мс
     delayInterval: 10000, //задержка в мс перед скольжением
     manual: false, //ручное переслистование слайдов (true), автоматическое (false)
-    hoverStop: true, //(true) - при наведении мышки на блок, слайдер в авто режиме останавливается, (false) - игнорируется
-    slidesInBlock: 3, //количество видимых слайдов в блоке
+    hoverStop: true, //(true) - при наведении мышки на блок, слайдер в авто режиме останавливается, (false) - игнорируется 
+    slidesInBlock: 
+    (screenwidth >= 992) ? 
+      3 : 
+    (screenwidth >= 576) ?
+      2 : 
+      1, //количество видимых слайдов в блоке
   };
 
 return (

@@ -11,7 +11,7 @@ import styles from './style.module.scss';
 
 function Blog() {
   const { state, dispatch } = useContext(Context);
-  const { lang, ua, ru, modalBlog } = state;
+  const { lang, ua, ru, modalBlog, screenwidth } = state;
   const blog = lang ? ru.blog : ua.blog;
 
   const sliderProps = {
@@ -19,7 +19,10 @@ function Blog() {
     delayInterval: 10000, //задержка в мс перед скольжением
     manual: false, //ручное переслистование слайдов (true), автоматическое (false)
     hoverStop: true, //(true) - при наведении мышки на блок, слайдер в авто режиме останавливается, (false) - игнорируется
-    slidesInBlock: 4, //количество видимых слайдов в блоке
+    slidesInBlock: screenwidth >= 992 ? 4 : 
+    screenwidth >= 576 ?
+    2 :
+    1, //количество видимых слайдов в блоке
   };
 
   const handleClik = (content) => {

@@ -5,9 +5,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
   background-color: transparent;
   transition: background-color 1s;
+  z-index: 100;
 }
 
 .containerBoxScroll {
@@ -15,12 +15,14 @@
 }
 
 .content {
-  height: 90px;
+  position: relative;
+  height: 50px;
   padding-right: 5%;
   padding-left: 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 2;
 }
 
 .rightBlock {
@@ -33,6 +35,7 @@
 
 .nav {
   display: block;
+  margin-right: 10px;
 }
 
 .menu {
@@ -40,28 +43,83 @@
   margin-left: 14px;
   margin-bottom: 0;
   padding-left: 0;
-  & li {
+  & p {
     margin-right: 49px;
+    color: #0d6efd;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
     &:last-child {
       margin-right: 0;
     }
-    & a:active {
+    &:active {
       color: #ffa37b;
     }
-    & a:hover {
+    &:hover {
       color: #ff5005;
-    }
-    & a {
-      color: #0d6efd;
-      font-size: 16px;
-      font-weight: 700;
     }
   }
 }
 
+.mobileMenuContainer {
+  position: absolute;
+  top: -500%;
+  left: 0;
+  background-color: rgb(128, 128, 128, 0.8);
+  width: 100%;
+  padding-right: 5%;
+  padding-left: 5%;
+  z-index: 1;
+  & p:first-child {
+    margin: 50px 0 0 0;
+  }
+  & p:last-child {
+    margin: 0 0 10px 0;
+  }
+  & p {
+    color: white;
+  }
+  transition: top 0.5s ease;
+}
+
+.line {
+  border: 2px dotted yellow;
+}
+
+.active {
+  top: 0;
+  transition: all 0.5s ease;
+}
+
+.mobileMenu {
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 4px;
+  background-color: #0d6efd;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-7px, 8px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-4px, -4px);
+}
+
 .phone {
   width: 190px;
-  height: 54px;
+  height: 41px;
   background: #ffa37b;
   margin: 0 14px;
   display: flex;
@@ -86,9 +144,9 @@
 
 .lang {
   & img {
-    width: 25px;
+    width: 16px;
   }
-  height: 54px;
+  height: 33px;
   position: relative;
   cursor: pointer;
 }
@@ -96,28 +154,85 @@
 .langList {
   & img {
     position: absolute;
-    top: 30px;
+    top: 17px;
     left: 0;
-    width: 25px;
+    width: 16px;
   }
   cursor: pointer;
 }
 
+@media (min-width: 576px) {
+  .nav {
+    margin-right: 0;
+  }
 
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #0d6efd;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
 
-@media (max-width: 992px) {
-  .content {
-    padding-right: 2%;
-    padding-left: 2%;
+  .lang {
+    & img {
+      width: 20px;
+    }
+    height: 41px;
+  }
+
+  .langList {
+    & img {
+      top: 21px;
+      width: 20px;
+    }
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-10px, 8px);
+    transform: rotate(-45deg) translate(-10px, 8px);
+  }
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-5px, -4px);
+    transform: rotate(45deg) translate(-5px, -4px);
   }
 }
 
+@media (min-width: 992px) {
+  .containerBox {
+    background-color: transparent;
+  }
 
+  .mobileMenuContainer {
+    display: none;
+  }
 
-// @media (min-width: 1200px) {
-//   .containerBox {
-//     max-width: 1140px;
-      
-//     //margin: 0 5%;
-//   }
-// }
+  .content {
+    height: 90px;
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+
+  .phone {
+    height: 54px;
+  }
+
+  .lang {
+    & img {
+      width: 25px;
+    }
+    height: 51px;
+  }
+
+  .langList {
+    & img {
+      top: 26px;
+      width: 25px;
+    }
+  }
+
+  .containerBoxScroll {
+    background-color: rgb(0, 0, 0, 0.3);
+  }
+}

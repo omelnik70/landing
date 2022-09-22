@@ -7,9 +7,11 @@ import {
     CURRENTLANG, 
     MODALACTIVEGALLERY, 
     MODALACTIVEBLOG, 
+    MODALACTIVEMENU,
     CONTENTCURRENTEBLOG,
     MODALACTIVEFORM,
     CURRENTSCROLL,
+    SCREENWIDTH,
 } from "./boilerplate";
 
 //создаем action генераторы
@@ -68,8 +70,19 @@ const isGallery = (payload) => ({
     payload,
 });
 
+const screenWidth = (payload) => ({
+    type: SCREENWIDTH,
+    payload,
+});
+
+const modalActivMenu = (payload) => ({
+    type: MODALACTIVEMENU,
+    payload,
+});
+
 export {
     isTop,
+    screenWidth,
     isContact,
     isAbout,
     isNumbers,
@@ -77,6 +90,7 @@ export {
     currentLang,
     modalActivGallery,
     modalActivBlog,
+    modalActivMenu,
     contentCurrentBlog,
     modalActivForm,
     currentActionScroll

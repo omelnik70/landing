@@ -2,6 +2,7 @@ import {
     CURRENTLANG, 
     MODALACTIVEGALLERY, 
     MODALACTIVEBLOG,
+    MODALACTIVEMENU,
     CONTENTCURRENTEBLOG,
     MODALACTIVEFORM,
     CURRENTSCROLL,
@@ -10,6 +11,7 @@ import {
     ISABOUT,
     ISNUMBERS,
     ISGALLERY,
+    SCREENWIDTH,
 } from "./boilerplate";
 
 //создаем кейсы по изменению состояния
@@ -81,6 +83,18 @@ const reducer = (state, action) => {
         return {
             ...state,
             gallery: action.payload,
+        };
+
+        case SCREENWIDTH: 
+        return {
+            ...state,
+            screenwidth: action.payload,
+        };
+
+        case MODALACTIVEMENU: 
+        return {
+            ...state,
+            modalMenu: action.payload,
         };
 
         //по умолчанию 

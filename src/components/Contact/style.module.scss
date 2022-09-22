@@ -16,14 +16,25 @@
 
 .infoBox {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
     margin-top: 74px;
 }
 
-.info {
+.infoContainer {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10% 0 10%;
+    &:first-child {
+        margin-top: 0;
+    }
     & p {
         margin-bottom: 0;
     }
@@ -31,26 +42,108 @@
 
 .copyrightBox {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 74px;
     & p {
+        font-size: 12px;
+        margin: 0 2px;
+    }
+    & span {
+        font-size: 12px;
         margin: 0 2px;
     }
     & a {
+        font-size: 12px;
         margin: 0 2px;
     }
 }
 
 @media (min-width: 576px) {
     .containerBox {
+        flex: 0 0 90%;
         max-width: 540px;
+    }
+
+    .infoContainer {
+        flex: 1 1 auto;
+        flex-direction: row;
+    }
+
+    .info {
+        margin: 0;
+        & h3 {
+            font-size: 16px;
+        }
+        & p {
+            font-size: 12px;
+        }
+    }
+
+    .infoBox {
+        flex-direction: column;
+    }
+
+    .copyrightBox {
+        flex-direction: row;
+        & p {
+            font-size: 10px;
+        }
+        & a {
+            font-size: 10px;
+        }
     }
 }
 
 @media (min-width: 768px) {
     .containerBox {
         max-width: 720px;
+    }
+
+    .info {
+        & p {
+            font-size: 14px;
+        }
+    }
+
+    .copyrightBox {
+        & p {
+            font-size: 12px;
+        }
+        & a {
+            font-size: 12px;
+        }
+    }
+
+    .infoBox {
+        flex-direction: row;
+    }
+
+    .infoContainer {
+        justify-content: space-between;
+        padding-right: 5%;
+    }
+}
+
+@media (min-width: 992px) {
+    .containerBox {
+        max-width: 720px;
+    }
+
+    .info {
+        & p {
+            font-size: 16px;
+        }
+    }
+
+    .copyrightBox {
+        & p {
+            font-size: 14px;
+        }
+        & a {
+            font-size: 14px;
+        }
     }
 }
 

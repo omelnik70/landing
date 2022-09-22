@@ -1,5 +1,17 @@
 @import '../../../../global.scss';
 
 .img {
-    width: 25%;
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .img {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .img {
+        width: 25%;
+    }
 }

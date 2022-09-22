@@ -21,26 +21,25 @@
 
 .numbers {
     width: 90%;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 .number {
-    flex: 1 1 50%;
+    flex: 0 0 50%;
     margin-top: 63px;
 }
 
-// @media (min-width: 576px) {
-//     .containerBox {
-//         max-width: 540px;
-//     }
-// }
-
-// @media (min-width: 768px) {
-//     .containerBox {
-//         max-width: 720px;
-//     }
-// }
+@media (min-width: 576px) {
+    .number {
+        margin-top: 63px;
+        &:nth-child(2) {
+            margin-top: 0;
+        }
+    }
+}
 
 @media (min-width: 992px) {
     .text {
@@ -48,7 +47,14 @@
     }
 
     .numbers {
-        width: 90%;
+        flex-direction: row;
+    }
+
+    .number {
+        margin-top: 63px;
+        &:nth-child(2) {
+            margin-top: 63px;
+        }
     }
 }
 

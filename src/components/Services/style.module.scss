@@ -1,7 +1,6 @@
 @import '../../global.scss';
 
 .containerBox {
-    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -10,6 +9,7 @@
 
 .rowBox {
     display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 576px) {
@@ -21,6 +21,11 @@
 @media (min-width: 768px) {
     .containerBox {
         max-width: 720px;
+    }
+
+    .rowBox {
+        display: flex;
+        flex-direction: row;
     }
 }
 

@@ -12,6 +12,11 @@ const Store = {
     modalGallery: false,
     modalBlog: false,
     modalForm: false,
+    modalMenu: false,
+
+    //размер экрана
+    screenwidth: 0,
+
     contentCurrentBlog: [],
     mail: "mailto:omelnik70@gmail.com",
     arrow: ICONS.ARROW,
@@ -43,12 +48,12 @@ const Store = {
         metaKeywords: "Микуличин, відпочинок у горах, походи в гори, зимовий відпочинок, лижний курорт, карпатські чани",
         message: "Написати нам",
         phone: "+3807610748",
-        nav: [
-            {text: "Про нас", link: "/#about"},
-            {text: "Номери", link: "/#numbers"},
-            {text: "Галерея", link: "/#gallery"},
-            {text: "Контакти", link: "/#contact"},
-        ],
+        nav: {
+            about: "Про нас",
+            numbers: "Номери",
+            gallery: "Галерея",
+            contact: "Контакти",
+        },
         service: [
             {
                 src: ICONS.ROOM, 
@@ -394,12 +399,12 @@ const Store = {
         metaKeywords: "Микуличин, отдых в горах, походы в горы, зимний отдых, лыжный курорт, карпатские чаны",
         message: "Написать нам",
         phone: "+3807610748",
-        nav: [
-            {text: "О нас", link: "/#about"},
-            {text: "Номера", link: "/#numbers"},
-            {text: "Галерея", link: "/#gallery"},
-            {text: "Контакты", link: "/#contact"},
-        ],
+        nav: {
+            about: "О нас",
+            numbers: "Номера",
+            gallery: "Галерея",
+            contact: "Контакты",
+        },
         service: [
             {
                 src: ICONS.ROOM, 
@@ -734,11 +739,6 @@ const Store = {
                 text_3: "+380637610748",
             },
         ],
-    },
-
-    //размер экрана для мобильных настроек
-    global: {
-      SCREENWIDTH: 767,
     },
 
     //социальные сети

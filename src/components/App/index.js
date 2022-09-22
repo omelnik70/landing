@@ -19,14 +19,15 @@ import {
   isContact,
   isAbout,
   isNumbers,
-  isGallery 
+  isGallery,
+  screenWidth
 } from '../../store/actions';
 
 import styles from './style.module.scss';
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, Store);
-  const { lang, ru, ua, arrow, arrow_top, top, currentScroll } = state;
+  const { lang, ru, ua, arrow, arrow_top, top, currentScroll, screenwidth } = state;
 
   const mainTitle = lang ? ru.logoSite : ua.logoSite;
   const subTitle = lang ? ru.subTitle : ua.subTitle;
@@ -37,6 +38,16 @@ const App = () => {
   const handleScroll = () => {
     dispatch(currentActionScroll(window.scrollY))
   };
+
+  const handleScreenWidth = () => {
+    dispatch(screenWidth(window.screen.width));
+  };
+
+  useEffect(() => {
+  window.addEventListener("resize", handleScreenWidth);
+  return () => window.removeEventListener("resize", handleScreenWidth);
+});
+
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -62,19 +73,24 @@ const App = () => {
     title.textContent = `${mainTitle} | ${description}`;
     metaDesc.content = metaDescription;
     metaKeyw.content = metaKeywords;
-  }, [mainTitle, description, metaDescription, metaKeywords]);
+  }, [
+    mainTitle, 
+    description, 
+    metaDescription, 
+    metaKeywords
+  ]);
 
   const value = {state, dispatch};
 
   return (
     <Context.Provider value={value}>
       <div id="top" className={styles.containerBox}>
-      {currentScroll >= 1800 && (
+      {(currentScroll >= 1800) && (screenwidth >= 678) && (
       <div onClick={() => handleShow(top)} className={styles.arrowTop}>
         <img src={arrow_top} alt="" />
       </div>
       )}
-        <Header top={top} />
+        <Header />
         <div className={styles.carouselBox}>
           <Slider />
           <div className={styles.mainText}>
