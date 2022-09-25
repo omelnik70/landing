@@ -30,8 +30,11 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
     cursor: pointer;
-    z-index: 1;
+    z-index: 2;
 }
 
 .left {

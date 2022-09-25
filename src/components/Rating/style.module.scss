@@ -1,0 +1,17 @@
+@import '../../global.scss';
+
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & i:not(:last-of-type) {
+        margin-right: 6px;
+    }
+    & i::before {
+        font-family: 'FontAwesome';
+        content: "\2605";
+        font-style: normal;
+        font-size: 26px;
+        color: #ffb400;
+    }
+}

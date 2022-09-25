@@ -55,6 +55,11 @@ import MOUNTAINCHURCH from "./image/blog/mountain_church.webp";
 import BERRYMOUNTAIN from "./image/blog/berry_mountain.webp";
 import MOUNTAINMAKOVITSA from "./image/blog/mountain_makovitsa.webp";
 import MOUNTAINHAMSTER from "./image/blog/mountain_hamster.webp";
+//hotels
+import HOTEL1 from "./image/hotels/hotel_1.webp";
+import HOTEL2 from "./image/hotels/hotel_2.webp";
+import HOTEL3 from "./image/hotels/hotel_3.webp";
+import HOTEL4 from "./image/hotels/hotel_4.webp";
 
 const ICONS = {
     ROOM,
@@ -121,7 +126,13 @@ const IMAGES = {
     BERRYMOUNTAIN,
     MOUNTAINMAKOVITSA,
     MOUNTAINHAMSTER
-  }
+  },
+  HOTELS: {
+    HOTEL1,
+    HOTEL2,
+    HOTEL3,
+    HOTEL4,
+  },
 };
 
 export { ICONS, IMAGES };

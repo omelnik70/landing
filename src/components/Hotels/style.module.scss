@@ -1,0 +1,57 @@
+@import '../../global.scss';
+
+.containerBox {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.titleBox {
+    width: inherit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    & button {
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 10px;
+        &:hover {
+            color: rgb(255, 123, 0);
+        }
+    }
+}
+
+.title {
+    font-size: 12px;
+}
+
+.slide {
+    box-sizing: border-box;
+    height: auto;
+
+}
+
+@media (min-width: 576px) {
+    .title {
+        font-size: 18px;
+    }
+
+    .titleBox {
+        & button {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .containerBox {
+        height: inherit;
+    }
+}

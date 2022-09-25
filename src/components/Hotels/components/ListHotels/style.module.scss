@@ -1,0 +1,57 @@
+@import '../../../../global.scss';
+
+.containerBox {
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.contantBox {
+    border: 1px dashed gray;
+    padding: 5px;
+    margin: 0 2px;
+    & p {
+        font-size: 12px;
+    }
+}
+
+.titleBox {
+    display: flex;
+    align-items: center;
+    & h3 {
+        font-size: 14px;
+        margin: 0 5px 0 0;
+        & a {
+            color: black;
+            &:hover {
+                color: rgb(255, 123, 0);
+            }
+        }
+    }
+    & p {
+        & a {
+            font-size: 12px;
+        }
+        & a:hover {
+            color: rgb(255, 123, 0);
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .titleBox {
+        & h3 {
+            font-size: 20px;
+        }
+        & p {
+            & a {
+                font-size: 15px;
+            }
+        }
+    } 
+
+    .contantBox {
+        & p {
+            font-size: 15px;
+        }
+    }
+}

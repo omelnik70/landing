@@ -87,7 +87,8 @@
   padding: 90px 0;
 }
 
-.reviewsBox {
+.reviewsBox,
+.blog {
   position: relative;
   padding: 90px 0;
   background: url('../../assets/image/carousel/carousel_1.webp') 50%/cover no-repeat;
@@ -99,12 +100,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(13,11,24,.7);
+  background-color: rgba(13,11,24,.2);
 }
 
 .hotels {
   background: #fff;
-  padding-top: 90px;
+  padding: 90px 0;
 }
 
 .blog {

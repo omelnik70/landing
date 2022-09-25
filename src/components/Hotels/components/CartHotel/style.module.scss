@@ -1,0 +1,178 @@
+@import '../../../../global.scss';
+
+.containerBox {
+    margin: 0 2px;
+}
+
+.imageHotel {
+    position: relative;
+    & h3 {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: rgba(110, 108, 108, 0.5);
+        & a {
+            font-size: 10px;
+            color: white;
+            &:hover {
+                color: rgb(255, 123, 0);
+            }
+        }
+    }
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.titleBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    & h2 {
+        font-size: 12px;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(110, 108, 108, 0.5);
+    }
+}
+
+.description {
+    display: none;
+}
+
+.lable {
+    position: absolute;
+    top: 15%;
+    right: 0;
+    transform: rotate(30deg);
+}
+
+.new,
+.hot,
+.other {
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 10px;
+}
+
+.new {
+    background-color: rgb(53, 199, 16);
+}
+
+.hot {
+    background-color: rgb(255, 0, 0);
+}
+
+.other {
+    background-color: rgb(255, 123, 0);
+}
+
+.btnBox {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+@media (min-width: 576px) {
+    .imageHotel {
+        & h3 {
+            padding: 10px;
+            & a {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .titleBox {
+        & h2 {
+            font-size: 18px;
+        }
+    }
+
+    .description {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        & p {
+            font-size: 14px;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(110, 108, 108, 0.7);
+            margin: 0 15%;
+        }
+    }
+
+    .new,
+    .hot,
+    .other {
+        font-size: 12px;
+    }
+
+    .lable {
+        top: 40px;
+        right: 10px;
+        //transform: rotate(0deg);
+    }
+
+    .new,
+    .hot,
+    .other {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .imageHotel {
+        & h3 {
+            font-size: 20px;
+        }
+    }
+
+    .titleBox {
+        & h2 {
+            font-size: 20px;
+        }
+    }
+
+    .description {
+        & p {
+            font-size: 14px;
+        }
+    }
+
+    .new,
+    .hot,
+    .other {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    .description {
+        & p {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .description {
+        & p {
+            font-size: 16px;
+        }
+    }
+}

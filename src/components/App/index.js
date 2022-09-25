@@ -8,7 +8,7 @@ import Services from '../Services';
 import Header from '../Header';
 import About from '../About';
 import Reviews from '../Reviews';
-import Numbers from '../Numbers';
+import Hotels from '../Hotels';
 import Blog from '../Blog';
 import Contact from '../Contact';
 import Slider from '../Slider';
@@ -118,9 +118,10 @@ useEffect(() => {
           <Reviews />
         </div>
         <div id="hotels" className={styles.hotels}>
-          <Numbers />
+          <Hotels />
         </div>
         <div id="blog" className={styles.blog}>
+          <div className={styles.background}></div>
           <Blog />
         </div>
         <div id="contact" className={styles.contact}>

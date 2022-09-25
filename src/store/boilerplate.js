@@ -3,6 +3,7 @@ const CURRENTLANG = "currentLang";
 const CURRENTSCROLL = "currentActionScroll";
 const MODALACTIVEGALLERY = "modalActivGallery";
 const MODALACTIVEBLOG = "modalActivBlog";
+const MODALACTIVEHOTEL = "modalActiveHotel";
 const MODALACTIVEMENU = "modalActivMenu";
 const CONTENTCURRENTEBLOG = "contentCurrentBlog";
 const MODALACTIVEFORM = "modalActivForm";
@@ -25,6 +26,7 @@ export {
     CURRENTLANG,
     MODALACTIVEGALLERY,
     MODALACTIVEBLOG,
+    MODALACTIVEHOTEL,
     MODALACTIVEMENU,
     CONTENTCURRENTEBLOG,
     MODALACTIVEFORM,

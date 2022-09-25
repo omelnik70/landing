@@ -2,6 +2,7 @@ import {
     CURRENTLANG, 
     MODALACTIVEGALLERY, 
     MODALACTIVEBLOG,
+    MODALACTIVEHOTEL,
     MODALACTIVEMENU,
     CONTENTCURRENTEBLOG,
     MODALACTIVEFORM,
@@ -42,6 +43,12 @@ const reducer = (state, action) => {
         return {
             ...state,
             modalBlog: action.payload,
+        };
+
+        case MODALACTIVEHOTEL: 
+        return {
+            ...state,
+            modalHotel: action.payload,
         };
 
         case CONTENTCURRENTEBLOG: 

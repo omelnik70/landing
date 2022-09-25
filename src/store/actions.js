@@ -8,6 +8,7 @@ import {
     CURRENTLANG, 
     MODALACTIVEGALLERY, 
     MODALACTIVEBLOG, 
+    MODALACTIVEHOTEL,
     MODALACTIVEMENU,
     CONTENTCURRENTEBLOG,
     MODALACTIVEFORM,
@@ -33,6 +34,11 @@ const modalActivGallery = (payload) => ({
 
 const modalActivBlog = (payload) => ({
     type: MODALACTIVEBLOG,
+    payload,
+});
+
+const modalActivHotel = (payload) => ({
+    type: MODALACTIVEHOTEL,
     payload,
 });
 
@@ -97,6 +103,7 @@ export {
     currentLang,
     modalActivGallery,
     modalActivBlog,
+    modalActivHotel,
     modalActivMenu,
     contentCurrentBlog,
     modalActivForm,

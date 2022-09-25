@@ -1,18 +1,16 @@
 import React from 'react';
 
+import Rating from '../../../Rating';
+
 import styles from './style.module.scss';
 
-function CartReview({ title, text, img, auhtor }) {
+function CartReview({ title, text, img, auhtor, rating }) {
 
   return (
     <div className={styles.containerBox}>
-      <div className={styles.rating}>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-          <i></i>
-        </div>
+      <div className={styles.ratingBox}>
+        <Rating rating={rating} />
+      </div>
       <div className={styles.title}>
         <h3>{title}</h3>
       </div> 

@@ -71,7 +71,7 @@ function Contact() {
           <Icons 
             style={{
             height: "auto",
-            width: "5%"
+            width: "10%"
             }} 
           />
         </div>

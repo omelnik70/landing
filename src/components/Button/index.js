@@ -2,10 +2,13 @@ import React from 'react';
 
 import styles from './style.module.scss';
 
-const Button = ({ src, link, text, content }) => {
+const Button = ({ src, link, text, content, styleHotelText, styleHotelBtn }) => {
   
   return (
-    <div className={styles.btn}>
+    <div 
+      className={styles.btn}
+      style={styleHotelBtn}
+    >
       {text && (
         <span>{text}</span>
       )}
@@ -13,7 +16,12 @@ const Button = ({ src, link, text, content }) => {
         {src && (
         <img src={src} alt="" />
         )}
-        <a href={link}>{content}</a>
+        <a 
+          href={link}
+          style={styleHotelText}
+        >
+          {content}
+        </a>
       </div>
     </div>
   );

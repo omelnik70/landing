@@ -63,13 +63,16 @@ function Carousel({ children, value }) {
             onMouseLeave={() => setHover(false)}
             className={styles.windowBox}
         >
-            {(manual || hover) && (<div 
-                onClick={() => handleClickOffsetLeft(setOffset, setComparison, sumSlides , slidesInBlock)}
-                className={`${styles.arrow} ${styles.left}`}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-            </div>)}
+            {(manual || hover) && (
+                <div 
+                    onClick={() => handleClickOffsetLeft(setOffset, setComparison, sumSlides , slidesInBlock)}
+                    className={`${styles.arrow} ${styles.left}`}
+                >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </div>
+            )}
             <div 
                 className={styles.slides}
                 style={{
@@ -79,13 +82,16 @@ function Carousel({ children, value }) {
             >
                 {slides}
             </div>
-            {(manual || hover) && (<div 
-                onClick={() => handleClickOffsetRight(setOffset, slidesInBlock)}
-                className={`${styles.arrow} ${styles.right}`}>
+            {(manual || hover) && (
+                <div 
+                    onClick={() => handleClickOffsetRight(setOffset, slidesInBlock)}
+                    className={`${styles.arrow} ${styles.right}`}
+                >
                     <span></span>
                     <span></span>
                     <span></span>
-            </div>)}
+                </div>
+            )}
         </div>
     );
 }
