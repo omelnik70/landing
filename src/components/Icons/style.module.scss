@@ -17,10 +17,23 @@
 
 @media (min-width: 768px) {
   .iconBox {
-    justify-content: space-between;
+    flex: 0 0 30%;
     & img {
-      width: 25%;
-      height: 100%;
+      width: 20%;
+      height: auto;
+    }
   }
 }
+
+@media (min-width: 1200px) {
+  .iconBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+    & img {
+      width: 15%;
+      height: auto;
+    }
+  }
 }

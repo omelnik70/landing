@@ -5,6 +5,15 @@
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
+    & span {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-bottom: 3px solid #0d6efd;
+        border-left: 3px solid #0d6efd;
+        margin: -2px;
+        float: left;
+    }
 }
 
 .slides {
@@ -19,17 +28,64 @@
 
 .arrow {
     position: absolute;
-    top: 45%;
-    font-size: 40px;
-    color: rgba(110, 110, 110, 0.2);
+    top: 50%;
+    transform: translate(0, -50%);
     cursor: pointer;
+    z-index: 1;
+}
+
+.left {
+    left: 40px;
+}
+
+.left span {
+    animation: left 1s infinite;
+    &:nth-child(2){
+        animation-delay: -0.1s;
+    }
+    &:nth-child(3){
+        animation-delay: -0.2s;
+    }
 }
 
 .right {
     right: 40px;
 }
 
-.left {
-    left: 40px;
-    z-index: 2;
+.right span {
+    animation: right 1s infinite;
+    &:nth-child(2){
+        animation-delay: 0.1s;
+    }
+    &:nth-child(3){
+        animation-delay: 0.2s;
+    }
+}
+
+@keyframes left {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-0px,-0px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(0px,0px);
+    }
+}
+
+@keyframes right {
+    0%{
+        opacity: 0;
+        transform: rotate(-135deg) translate(-0px,-0px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(-135deg) translate(0px,0px);
+    }
 }

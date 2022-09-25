@@ -9,7 +9,7 @@ function CartBlog({ title, img, handleClik }) {
       onClick={handleClik}
       className={styles.containerBox}>
       <div className={styles.slide}>
-        <img src={img} alt="" />
+      {img && (<img src={img} alt="" />)}
         <h2>{title}</h2>
       </div>
     </div>

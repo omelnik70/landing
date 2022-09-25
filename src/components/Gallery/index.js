@@ -22,7 +22,13 @@ const handleClik = (e) => {
       <div 
         onClick={(e) => handleClik(e)}
         className={styles.containerBox}>
-        <Modal active={modalGallery} modalActiv={modalActivGallery}><img src={children} alt="" /></Modal>
+        <Modal active={modalGallery} modalActiv={modalActivGallery}>
+          {children && (
+            <div className={styles.imgBox}>
+              <img src={children} alt="" />
+            </div>
+          )}
+        </Modal>
         {gallery.map((item, index) => (<GalleryImg key={index} src={item.src} title={item.title} />))}
       </div>
   );

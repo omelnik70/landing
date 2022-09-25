@@ -2,11 +2,19 @@ import React from 'react';
 
 import styles from './style.module.scss';
 
-const Button = ({ message, style, mail }) => {
+const Button = ({ src, link, text, content }) => {
   
   return (
-    <div style={style} className={styles.message}>
-        <span><a href={mail}>{message}</a></span>
+    <div className={styles.btn}>
+      {text && (
+        <span>{text}</span>
+      )}
+      <div className={styles.contentBox}>
+        {src && (
+        <img src={src} alt="" />
+        )}
+        <a href={link}>{content}</a>
+      </div>
     </div>
   );
 }

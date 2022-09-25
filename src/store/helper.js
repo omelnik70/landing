@@ -15,7 +15,7 @@ export function browserLocale (lang) {
 
   //добавляет плавный скролл к элементу ref
   // f - функция, которую нужно вызвать при клике  
-  export function handleShow (ref, f) {
+  export const handleShow = (ref, f = () => {}) => {
     ref.scrollIntoView({block: 'start', behavior: 'smooth'});
     f();
   };

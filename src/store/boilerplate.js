@@ -9,16 +9,18 @@ const MODALACTIVEFORM = "modalActivForm";
 const ISTOP = "isTop";
 const ISCONTACT = "isContact";
 const ISABOUT = "isAbout";
-const ISNUMBERS = "isNumbers";
-const ISGALLERY = "isGallery";
+const ISHOTELS = "isHotels";
+const ISGALLERY = "isBlog";
+const ISBLOG = "isGallery";
 const SCREENWIDTH = "screenWidth";
 
 export {
     ISTOP,
+    ISBLOG,
     SCREENWIDTH,
     ISCONTACT,
     ISABOUT,
-    ISNUMBERS,
+    ISHOTELS,
     ISGALLERY,
     CURRENTLANG,
     MODALACTIVEGALLERY,

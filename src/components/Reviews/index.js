@@ -19,7 +19,7 @@ function Reviews() {
     slidesInBlock: 
     (screenwidth >= 992) ? 
       3 : 
-    (screenwidth >= 576) ?
+    (screenwidth >= 768) ?
       2 : 
       1, //количество видимых слайдов в блоке
   };

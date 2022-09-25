@@ -10,8 +10,10 @@ const Icons = ({ style }) => {
   const aboutImg = lang ? ru.aboutImg : ua.aboutImg;
   
   return (
-    <div style={style} className={styles.iconBox}>
-      {aboutImg.map((item, index) => (<img key={index} src={item.src} title={item.title} alt="" />))}
+    <div className={styles.iconBox}>
+      {aboutImg.map((item, index) => (
+        <img style={style} key={index} src={item.src} title={item.title} alt="" />
+      ))}
     </div>
   );
 }

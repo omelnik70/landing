@@ -16,7 +16,7 @@
 
 .infoBox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     margin-top: 74px;
 }
@@ -31,13 +31,37 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 10px 10% 0 10%;
+    //margin: 10px 10% 0 10%;
     &:first-child {
         margin-top: 0;
     }
     & p {
         margin-bottom: 0;
     }
+}
+
+.map {
+    flex: 1 1 auto;
+    height: 100%;
+}
+
+.advertising {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    border: 2px dotted #0d6efd;
+    margin: 2%;
 }
 
 .copyrightBox {
@@ -66,11 +90,6 @@
         max-width: 540px;
     }
 
-    .infoContainer {
-        flex: 1 1 auto;
-        flex-direction: row;
-    }
-
     .info {
         margin: 0;
         & h3 {
@@ -81,8 +100,10 @@
         }
     }
 
-    .infoBox {
-        flex-direction: column;
+    .advertising {
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .copyrightBox {
@@ -129,6 +150,10 @@
 @media (min-width: 992px) {
     .containerBox {
         max-width: 720px;
+    }
+
+    .infoBox {
+        justify-content: space-between;
     }
 
     .info {

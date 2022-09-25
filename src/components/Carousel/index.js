@@ -65,7 +65,10 @@ function Carousel({ children, value }) {
         >
             {(manual || hover) && (<div 
                 onClick={() => handleClickOffsetLeft(setOffset, setComparison, sumSlides , slidesInBlock)}
-                className={`${styles.arrow} ${styles.left}`}>{"<"}
+                className={`${styles.arrow} ${styles.left}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
             </div>)}
             <div 
                 className={styles.slides}
@@ -78,7 +81,10 @@ function Carousel({ children, value }) {
             </div>
             {(manual || hover) && (<div 
                 onClick={() => handleClickOffsetRight(setOffset, slidesInBlock)}
-                className={`${styles.arrow} ${styles.right}`}>{">"}
+                className={`${styles.arrow} ${styles.right}`}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
             </div>)}
         </div>
     );

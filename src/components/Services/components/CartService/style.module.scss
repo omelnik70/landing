@@ -45,23 +45,9 @@
 }
 
 @media (min-width: 992px) {
-  .titleBox {
-    & h2 {
-      font-size: 30px;
-    }
-  }
-
-  .textBox {
-    & p {
-      font-size: 16px;
-    }
-  }
-}
-  
-@media (min-width: 992px) {
-    .cartServiceBox {
-      -ms-flex: 0 0 33.333333%;
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%;
+  .cartServiceBox {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
   }
 }

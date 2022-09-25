@@ -39,6 +39,9 @@
 
 .window {
     max-width: 80%;
+    max-height: 70%;
+    // overflow-y: auto;
+    // overflow-x: hidden;
     padding: 2%;
     background-color: #ffffff;
     position: relative;

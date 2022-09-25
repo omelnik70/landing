@@ -16,11 +16,12 @@ import { handleShow } from '../../store/helper';
 import { 
   currentActionScroll,
   isTop,
+  isBlog,
   isContact,
   isAbout,
-  isNumbers,
+  isHotels,
   isGallery,
-  screenWidth
+  isScreenWidth,
 } from '../../store/actions';
 
 import styles from './style.module.scss';
@@ -28,7 +29,7 @@ import styles from './style.module.scss';
 const App = () => {
   const [state, dispatch] = useReducer(reducer, Store);
   const { lang, ru, ua, arrow, arrow_top, top, currentScroll, screenwidth } = state;
-
+  
   const mainTitle = lang ? ru.logoSite : ua.logoSite;
   const subTitle = lang ? ru.subTitle : ua.subTitle;
   const description = lang ? ru.description : ua.description;
@@ -40,14 +41,13 @@ const App = () => {
   };
 
   const handleScreenWidth = () => {
-    dispatch(screenWidth(window.screen.width));
+    dispatch(isScreenWidth(window.screen.width));
   };
 
-  useEffect(() => {
+useEffect(() => {
   window.addEventListener("resize", handleScreenWidth);
   return () => window.removeEventListener("resize", handleScreenWidth);
 });
-
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -61,14 +61,16 @@ const App = () => {
     const scrollTop = document.getElementById('top');
     const scrollContact = document.getElementById('contact');
     const scrollGallery = document.getElementById('gallery');
+    const scrollBlog = document.getElementById('blog');
     const scrollAbout = document.getElementById('about');
-    const scrollNumbers = document.getElementById('numbers');
+    const scrollHotels = document.getElementById('hotels');
 
     dispatch(isTop(scrollTop));
     dispatch(isContact(scrollContact));
     dispatch(isGallery(scrollGallery));
     dispatch(isAbout(scrollAbout));
-    dispatch(isNumbers(scrollNumbers));
+    dispatch(isHotels(scrollHotels));
+    dispatch(isBlog(scrollBlog));
     
     title.textContent = `${mainTitle} | ${description}`;
     metaDesc.content = metaDescription;
@@ -115,10 +117,10 @@ const App = () => {
           <div className={styles.background}></div>
           <Reviews />
         </div>
-        <div id="numbers" className={styles.numbers}>
+        <div id="hotels" className={styles.hotels}>
           <Numbers />
         </div>
-        <div className={styles.blog}>
+        <div id="blog" className={styles.blog}>
           <Blog />
         </div>
         <div id="contact" className={styles.contact}>

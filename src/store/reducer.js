@@ -7,9 +7,10 @@ import {
     MODALACTIVEFORM,
     CURRENTSCROLL,
     ISTOP,
+    ISBLOG,
     ISCONTACT,
     ISABOUT,
-    ISNUMBERS,
+    ISHOTELS,
     ISGALLERY,
     SCREENWIDTH,
 } from "./boilerplate";
@@ -61,6 +62,12 @@ const reducer = (state, action) => {
             top: action.payload,
         };
 
+        case ISBLOG: 
+        return {
+            ...state,
+            blog: action.payload,
+        };
+
         case ISCONTACT: 
         return {
             ...state,
@@ -73,10 +80,10 @@ const reducer = (state, action) => {
             about: action.payload,
         };
 
-        case ISNUMBERS: 
+        case ISHOTELS: 
         return {
             ...state,
-            numbers: action.payload,
+            hotels: action.payload,
         };
 
         case ISGALLERY: 

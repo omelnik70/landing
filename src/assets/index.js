@@ -12,6 +12,8 @@ import PARKING from "./icons/parking.png";
 import APARTMENTS from "./icons/apartments.png";
 import ARROW from "./icons/arrow.png";
 import ARROW_TOP from "./icons/up.png";
+import LOCATION from "./icons/location.png";
+import TELEGRAM from "./icons/telegram.svg";
 //image/about
 import MYKULYCHYN_GERB from "./image/about/mykulychyn_gerb.png";
 import MYKULYCHYN_PRAPOR from "./image/about/mykulychyn_prapor.png";
@@ -38,17 +40,21 @@ import REVIEW_6 from "./image/review/review_6.webp";
 import REVIEW_7 from "./image/review/review_7.webp";
 import REVIEW_8 from "./image/review/review_8.webp";
 import REVIEW_9 from "./image/review/review_9.webp";
-//
-import CANTEEN from "./image/blog/canteen.webp";
-import CHAN from "./image/blog/chan.webp";
+//blog
 import ENTERTAINMENT from "./image/blog/entertainment.webp";
-import KITCHEN from "./image/blog/kitchen.webp";
-import SAUNAS from "./image/blog/sauna.webp";
+import LEGEND from "./image/blog/legend.webp";
 import SHOPING from "./image/blog/shoping.webp";
 import WATERFALL from "./image/blog/waterfall.webp";
 import BREWERY from "./image/blog/brewery.webp";
 import CHURCH from "./image/blog/church.webp";
 import WALKS from "./image/blog/walks.webp";
+import LOCAL from "./image/blog/location.webp";
+import FACTS from "./image/blog/facts.webp";
+import HISTORY from "./image/blog/history.webp";
+import MOUNTAINCHURCH from "./image/blog/mountain_church.webp";
+import BERRYMOUNTAIN from "./image/blog/berry_mountain.webp";
+import MOUNTAINMAKOVITSA from "./image/blog/mountain_makovitsa.webp";
+import MOUNTAINHAMSTER from "./image/blog/mountain_hamster.webp";
 
 const ICONS = {
     ROOM,
@@ -63,7 +69,9 @@ const ICONS = {
     PARKING,
     APARTMENTS,
     ARROW,
-    ARROW_TOP
+    ARROW_TOP,
+    LOCATION,
+    TELEGRAM
 };
 
 const IMAGES = {
@@ -99,16 +107,20 @@ const IMAGES = {
     REVIEW_9,
   },
   BLOG: {
-    SAUNAS,
-    CANTEEN,
-    CHAN,
+    LEGEND,
     ENTERTAINMENT,
-    KITCHEN,
     SHOPING,
     WATERFALL,
     BREWERY,
     CHURCH,
     WALKS,
+    LOCAL,
+    FACTS,
+    HISTORY,
+    MOUNTAINCHURCH,
+    BERRYMOUNTAIN,
+    MOUNTAINMAKOVITSA,
+    MOUNTAINHAMSTER
   }
 };
 

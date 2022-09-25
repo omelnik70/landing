@@ -1,8 +1,9 @@
 import { 
     ISTOP,
+    ISBLOG,
     ISCONTACT,
     ISABOUT,
-    ISNUMBERS,
+    ISHOTELS,
     ISGALLERY,
     CURRENTLANG, 
     MODALACTIVEGALLERY, 
@@ -50,6 +51,11 @@ const isTop = (payload) => ({
     payload,
 });
 
+const isBlog = (payload) => ({
+    type: ISBLOG,
+    payload,
+});
+
 const isContact = (payload) => ({
     type: ISCONTACT,
     payload,
@@ -60,8 +66,8 @@ const isAbout = (payload) => ({
     payload,
 });
 
-const isNumbers = (payload) => ({
-    type: ISNUMBERS,
+const isHotels = (payload) => ({
+    type: ISHOTELS,
     payload,
 });
 
@@ -70,7 +76,7 @@ const isGallery = (payload) => ({
     payload,
 });
 
-const screenWidth = (payload) => ({
+const isScreenWidth = (payload) => ({
     type: SCREENWIDTH,
     payload,
 });
@@ -82,10 +88,11 @@ const modalActivMenu = (payload) => ({
 
 export {
     isTop,
-    screenWidth,
+    isBlog,
+    isScreenWidth,
     isContact,
     isAbout,
-    isNumbers,
+    isHotels,
     isGallery,
     currentLang,
     modalActivGallery,

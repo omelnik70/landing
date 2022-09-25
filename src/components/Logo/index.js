@@ -5,7 +5,7 @@ import { handleShow } from '../../store/helper';
 
 import styles from './style.module.scss';
 
-const Logo = ({ style, top }) => {
+const Logo = ({ styleContact, top }) => {
   const { state } = useContext(Context);
   const { lang, ru, ua } = state;
 
@@ -13,7 +13,7 @@ const Logo = ({ style, top }) => {
   
   return (
     <div class={styles.logo}>
-      <p style={style} onClick={() => handleShow(top)}>{logo}</p>
+      <h2 style={styleContact} onClick={() => handleShow(top)}>{logo}</h2>
     </div>
   );
 }

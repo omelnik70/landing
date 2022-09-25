@@ -22,7 +22,7 @@ function CartReview({ title, text, img, auhtor }) {
       <div className={styles.image}>
         <img src={img} alt="" />
       </div>
-      <div className={styles.text}>
+      <div className={styles.auhtor}>
         <p>{auhtor}</p>
       </div>
     </div>
