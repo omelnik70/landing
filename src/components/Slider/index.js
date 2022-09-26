@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 
+import Image from '../Image';
 import Carousel from '../Carousel';
 import Context from "../../Context";
 
@@ -23,7 +24,7 @@ return (
       {/* здесь вставляете слыйды любым способом в любом формате*/}
       {slider.map((item, index) => (
         <div key={index} className={styles.slide}>
-          <img src={item.img} alt="" />
+          <Image imageData={{small: item.img.img_300, medium: item.img.img_768, large: item.img.img_1280}} />
         </div>
       ))}
       {/* ========================== */}

@@ -36,27 +36,25 @@ function Hotels() {
         <button onClick={() => handleClik()}>{hotelOpenList}</button>
       </div>
       <Modal active={modalHotel} modalActiv={modalActivHotel}><ListHotels hotels={hotels} /></Modal>
-      <div className={styles.sliderBox}>
-        <Carousel value={sliderProps}>
-          {/* здесь вставляете слыйды любым способом в любом формате*/}
-          {hotels.map((item, index) => (
-            <div  key={index} className={styles.slide}>
-              <CartHotel 
-                screenwidth={screenwidth}
-                title={item.title} 
-                rating={item.rating}
-                img={item.img} 
-                description={item.description}
-                btnText={btnText}
-                lable={item.lable}
-                phone={item.phone}
-                link={item.link}
-              />
-            </div>
-          ))}
-          {/* ========================== */}
-        </Carousel>
-      </div>
+      <Carousel value={sliderProps}>
+        {/* здесь вставляете слыйды любым способом в любом формате*/}
+        {hotels.map((item, index) => (
+          <div  key={index} className={styles.slide}>
+            <CartHotel 
+              screenwidth={screenwidth}
+              title={item.title} 
+              rating={item.rating}
+              img={item.img} 
+              description={item.description}
+              btnText={btnText}
+              lable={item.lable}
+              phone={item.phone}
+              link={item.link}
+            />
+          </div>
+        ))}
+        {/* ========================== */}
+      </Carousel>
     </div>
   );
 }
