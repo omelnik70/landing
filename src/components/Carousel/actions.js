@@ -10,7 +10,7 @@
     setState((currentOffset) => {
         const newOffset = currentOffset - percent * n;
         const minOffset = -(percent * (s - n));
-        //console.log(`"newOffset:" ${newOffset}`, `"minOffset:" ${minOffset}`, currentOffset, Boolean(newOffset === minOffset));
+        //console.log(`"newOffset_left:" ${newOffset}`, `"minOffset_left:" ${minOffset}`, currentOffset, Boolean(newOffset === minOffset));
         setComparison(newOffset === minOffset);
         return Math.max(newOffset, minOffset);
     });
@@ -23,7 +23,7 @@
     setState((currentOffset) => {
         const newOffset = currentOffset + percent * n;
         const maxOffset = 0;
-        //console.log(`"newOffset:" ${newOffset}`, `"maxOffset:" ${maxOffset}`, currentOffset, Boolean(newOffset === maxOffset));
+        //console.log(`"newOffset_rihgt:" ${newOffset}`, `"maxOffset_rihgt:" ${maxOffset}`, currentOffset, Boolean(newOffset === maxOffset));
         return Math.min(newOffset, maxOffset);
     });
 };

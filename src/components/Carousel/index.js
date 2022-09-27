@@ -31,6 +31,8 @@ function Carousel({ children, value }) {
     //если количество слайдов не кратно количеству видимых слайдов, последний не будет показан
     const sumSlides = Number.isInteger(children.length / slidesInBlock) ? children.length : children.length - 1;
 
+    //children.map((item, index) => console.log(item.key, index));
+
     useEffect(() => {
         setSlides(
             Children.map(children, child => {
@@ -63,7 +65,7 @@ function Carousel({ children, value }) {
             onMouseLeave={() => setHover(false)}
             className={styles.windowBox}
         >
-            {(manual || hover) && (
+            {((manual || hover) && (offset !== -(((sumSlides/slidesInBlock) - 1) * 100))) && (
                 <div 
                     onClick={() => handleClickOffsetLeft(setOffset, setComparison, sumSlides , slidesInBlock)}
                     className={`${styles.arrow} ${styles.left}`}
@@ -82,7 +84,7 @@ function Carousel({ children, value }) {
             >
                 {slides}
             </div>
-            {(manual || hover) && (
+            {((manual || hover) && offset) && (
                 <div 
                     onClick={() => handleClickOffsetRight(setOffset, slidesInBlock)}
                     className={`${styles.arrow} ${styles.right}`}

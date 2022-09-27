@@ -5,6 +5,10 @@
     margin-right: auto;
     margin-left: auto;
     overflow: hidden;
+    /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+    user-select: none;
+    /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+    touch-action: pan-y;
     & span {
         display: block;
         width: 10px;
@@ -24,6 +28,9 @@
     transition: translate;
     transition-property: transform;
     transition-timing-function: ease-in-out;
+    & img {
+        pointer-events: none;
+      }
 }
 
 .arrow {

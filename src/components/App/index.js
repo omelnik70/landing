@@ -87,7 +87,7 @@ useEffect(() => {
   return (
     <Context.Provider value={value}>
       <div id="top" className={styles.containerBox}>
-      {(currentScroll >= 1800) && (screenwidth >= 678) && (
+      {(currentScroll >= 1800) && (screenwidth >= 576) && (
       <div onClick={() => handleShow(top)} className={styles.arrowTop}>
         <img src={arrow_top} alt="" />
       </div>
