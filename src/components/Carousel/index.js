@@ -31,8 +31,6 @@ function Carousel({ children, value }) {
     //если количество слайдов не кратно количеству видимых слайдов, последний не будет показан
     const sumSlides = Number.isInteger(children.length / slidesInBlock) ? children.length : children.length - 1;
 
-    //children.map((item, index) => console.log(item.key, index));
-
     useEffect(() => {
         setSlides(
             Children.map(children, child => {
