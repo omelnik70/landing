@@ -12,6 +12,8 @@ import Hotels from '../Hotels';
 import Blog from '../Blog';
 import Contact from '../Contact';
 import Slider from '../Slider';
+import Info from '../Info';
+import Line from '../Line';
 import { handleShow } from '../../store/helper';
 import { 
   currentActionScroll,
@@ -35,6 +37,7 @@ const App = () => {
   const description = lang ? ru.description : ua.description;
   const metaDescription = lang ? ru.metaDescription : ua.metaDescription;
   const metaKeywords = lang ? ru.metaKeywords : ua.metaKeywords;
+  const blog = lang ? ru.blog : ua.blog;
 
   const handleScroll = () => {
     dispatch(currentActionScroll(window.scrollY))
@@ -87,7 +90,7 @@ useEffect(() => {
   return (
     <Context.Provider value={value}>
       <div id="top" className={styles.containerBox}>
-      {(currentScroll >= 1800) && (screenwidth >= 576) && (
+      {(currentScroll >= 1800) && (screenwidth >= 1200) && (
       <div onClick={() => handleShow(top)} className={styles.arrowTop}>
         <img src={arrow_top} alt="" />
       </div>
@@ -107,23 +110,35 @@ useEffect(() => {
         <div className={styles.serviceBox}>
           <Services />
         </div>
+        <Line />
+        <Info info={blog[1]} />
         <div id="gallery" className={styles.galleryBox}>
           <Gallery />
         </div>
         <div id="about" className={styles.aboutBox}>
           <About />
         </div>
+        <Line />
+        <Info info={blog[0]} />
         <div className={styles.reviewsBox}>
           <div className={styles.background}></div>
           <Reviews />
         </div>
+        <Info info={blog[3]} />
         <div id="hotels" className={styles.hotels}>
           <Hotels />
         </div>
+        <Info info={blog[7]} />
         <div id="blog" className={styles.blog}>
           <div className={styles.background}></div>
           <Blog />
         </div>
+        <Info info={blog[5]} />
+        <Line />
+        <Info info={blog[6]} />
+        <Line />
+        <Info info={blog[2]} />
+        <Line />
         <div id="contact" className={styles.contact}>
           <Contact />
         </div>

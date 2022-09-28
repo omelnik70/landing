@@ -34,10 +34,10 @@
   //background-color: rgb(0, 0, 0, 0.5);
   z-index: 2;
   & h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
   & h2 {
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
   }
   & p {
@@ -74,8 +74,7 @@
 
 .serviceBox {
   background: #fff;
-  padding: 90px 0;
-  padding-bottom: 24px;
+  padding: 90px 0 0 0;
 }
 
 .galleryBox {
@@ -84,13 +83,14 @@
 
 .aboutBox {
   background: #fff;
-  padding: 90px 0;
+  padding: 90px 0 0 0;
 }
 
 .reviewsBox,
 .blog {
   position: relative;
   padding: 90px 0;
+  margin: 90px 0;
   background: url('../../assets/image/carousel/carousel_1_1280.webp') 50%/cover no-repeat;
 }
 
@@ -114,7 +114,7 @@
 
 .contact {
   background: #ffffff;
-  padding-top: 90px;
+  padding-top: 0 0 90px 0;
 }
 
 /* полоса прокрутки (скроллбар) */

@@ -1,0 +1,86 @@
+@import '../../global.scss';
+
+.containerBox {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.infoBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentBox {
+    //flex: 0 0 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.subTitle {
+    margin-bottom: 10px;
+}
+
+.imageBox {
+    flex: 1 1 30%;
+    margin-right: 10px;
+    min-height: 100%;
+    width: auto;
+}
+
+.text {
+    flex: 1 1 70%;
+}
+
+.textWithoutPicture {
+    flex: 1 1 100%;
+}
+
+@media (min-width: 992px) {
+    .contentBox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .imageBox {
+        flex: 0 0 30%;
+    }
+
+    .text {
+        flex: 0 0 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .containerBox {
+        max-width: 1140px;
+    }
+
+    .title {
+        font-size: 35px;
+    }
+
+    .imageBox {
+        flex: 0 0 30%;
+    }
+
+    .text {
+        flex: 0 0 70%;
+    }
+}

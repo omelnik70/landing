@@ -4,6 +4,7 @@ import Logo from '../Logo';
 import Context from '../../Context';
 import Icons from "../Icons";
 import Button from '../Button';
+import Line from '../Line';
 
 import styles from './style.module.scss';
 
@@ -47,12 +48,12 @@ function Contact() {
               <div key={index} className={styles.info}>
                 <h3>{item.title}</h3>
                 <p>{item.text_1}</p>
-                <p>{item.text_2}</p>
-                <p>{item.text_3}</p>
-                <p>{item.text_4}</p>
+                {item.text_2 && (<p>{item.text_2}</p>)}
+                {item.text_3 && (<p>{item.text_3}</p>)}
+                {item.text_4 && (<p>{item.text_4}</p>)}
+                {(img && index === 2) && (<a href={link}><img src={img} alt="" /></a>)}
               </div>
             ))}
-            {img && (<a href={link}><img src={img} alt="" /></a>)}
           </div>
           <div className={styles.map}>
             <iframe 
@@ -75,7 +76,7 @@ function Contact() {
             }} 
           />
         </div>
-        <div className={styles.line}></div>
+        <Line />
         <div className={styles.advertising}>
           <h3>{btn.text}</h3>
           <div className={styles.btn}></div>
@@ -87,7 +88,6 @@ function Contact() {
             <Button 
               isPhone={true} 
               src={btn.img} 
-              //text={btn.text} 
               content={btn.phone} 
               link={btn.phoneLink} 
             />
