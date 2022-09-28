@@ -2,14 +2,12 @@
 
 .containerBox {
     position: relative;
-
 }
 
 .slide {
     width: 100vh;
     background-size: 100%;
     & img {
-        width: auto;
         height: 70vh;
     }
 }
