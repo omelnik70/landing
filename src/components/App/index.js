@@ -1,4 +1,5 @@
 import React, { useReducer, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Gallery from '../Gallery';
 import Store from '../../store/store';
@@ -31,6 +32,7 @@ import styles from './style.module.scss';
 const App = () => {
   const [state, dispatch] = useReducer(reducer, Store);
   const { lang, ru, ua, arrow, arrow_top, top, currentScroll, screenwidth } = state;
+  const navigate = useNavigate();
   
   const mainTitle = lang ? ru.logoSite : ua.logoSite;
   const subTitle = lang ? ru.subTitle : ua.subTitle;
@@ -47,6 +49,10 @@ const App = () => {
     dispatch(isScreenWidth(window.screen.width));
   };
 
+  useEffect(() => {
+    navigate(!lang ? '/' : '/ru');
+  }, [lang, navigate]);
+
 useEffect(() => {
   window.addEventListener("resize", handleScreenWidth);
   return () => window.removeEventListener("resize", handleScreenWidth);
@@ -59,6 +65,7 @@ useEffect(() => {
 
   useEffect(() => {
     const title = document.querySelector('title');
+    const html = document.getElementsByTagName('html')[0];
     const metaDesc = document.querySelectorAll('meta')[1];
     const metaKeyw = document.querySelectorAll('meta')[2];
     const scrollTop = document.getElementById('top');
@@ -78,11 +85,13 @@ useEffect(() => {
     title.textContent = `${mainTitle} | ${description}`;
     metaDesc.content = metaDescription;
     metaKeyw.content = metaKeywords;
+    html.lang = lang ? "ru" : "uk";
   }, [
     mainTitle, 
     description, 
     metaDescription, 
-    metaKeywords
+    metaKeywords,
+    lang
   ]);
 
   const value = {state, dispatch};

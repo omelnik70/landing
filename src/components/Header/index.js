@@ -62,8 +62,8 @@ const Header = () => {
       </div>
       <div className={styles.content}>
         <Logo top={top} />
-        <div class={styles.rightBlock}>
-          <nav class={styles.nav}>
+        <div className={styles.rightBlock}>
+          <nav className={styles.nav}>
           {(screenwidth > 991) && (
             <div className={styles.menu}>
               <p onClick={() => handleShow(about)}>{nav.about}</p>
@@ -107,10 +107,10 @@ const Header = () => {
             
             {focus && <span className={styles.langList}>
             {!lang ? (
-            <img src={ruFlag} alt="lang" />
+              <img src={ruFlag} alt="lang" />
             ) :
               (
-              <img src={uaFlag} alt="lang" />
+                  <img src={uaFlag} alt="lang" />
               )}
             </span>}
           </div>

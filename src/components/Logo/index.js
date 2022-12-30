@@ -12,7 +12,7 @@ const Logo = ({ styleContact, top }) => {
   const logo = lang ? ru.logoSite : ua.logoSite;
   
   return (
-    <div class={styles.logo}>
+    <div className={styles.logo}>
       <h2 style={styleContact} onClick={() => handleShow(top)}>{logo}</h2>
     </div>
   );
